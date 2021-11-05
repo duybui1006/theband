@@ -4,14 +4,51 @@
     box-sizing: border-box;
 }
 html{
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
+/*common*/
 .clear{
     clear: both;
 }
 .text-white{
     color: white!important;
 }
+.text-center{
+    text-align: center;
+}
+.mt-8{
+    margin-top: 8px!important;
+}
+.mt-16{
+    margin-top: 16px!important;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.col-full{
+    width: 100%;
+}
+.col-half{
+    width: 50%;
+}
+.col-third{
+    width: 33.33333%;
+}
+
+
+/*main*/
 #main{
 
 }
@@ -115,7 +152,7 @@ html{
 }
 #content .content-section{
     width: 800px;
-    padding: 64px;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -143,11 +180,7 @@ html{
     margin-top: 48px;
 
 }
-#content .member-item{
-    float: left;
-    width: calc(100%/3);
-    text-align: center;
-}
+
 #content .member-name{
     font-size: 15px;   
 }
@@ -188,13 +221,9 @@ html{
     margin-top: -3px;
 }
 .place-list{
-    margin: 32px -8px 48px;
+    margin-top: 32px;
 }
-.place-item{
-    float: left;
-    width: 33.333333%;
-    padding: 0 8px;
-}
+
 .place-img{
     width: 100%;
     display: block;
@@ -226,15 +255,71 @@ html{
     padding: 10px 16px;
     display: inline-block;
     margin-top: 15px;
+    border: none;
 }
 .place-buy-btn:hover{
     color: black;
     background-color: #ccc;
 
 }
-#footer{
-
+.contact-content{
+    margin-top: 48px;
 }
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.form-submit-btn{
+    background-color: black;
+    color: white;
+    padding: 10px 16px;
+    float: right;
+    border: none;
+}
+.form-submit-btn:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.map-section{
+    max-width: 100%;
+    height: auto;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list{
+    font-size: 24px;
+}
+#footer .social-list a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+#footer .social-list a:hover{
+    color: rgba(0,0,0,0.4);
+}
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0,0,0,0.6);
+}
+#footer .copyright a{
+    color: rgba(0,0,0,0.6);
+}
+
 .modal{
     position: fixed;
     top: 0;
